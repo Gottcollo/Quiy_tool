@@ -6,12 +6,11 @@ class QuestionLoader:
         self.file_path = file_path
     
     def load_questions(self):
-        if not os.path.exists(self.file_path):
-            raise FileNotFoundError(f"The file {self.file_path} does not exist.")
-        
         with open(self.file_path, 'r', encoding='utf-8') as file:
-            try:
-                data = json.load(file)
+            data = json.load(file)
+            if isinstance(data, dict) and 'questions' in data:
+                return data['questions']
+            elif isinstance(data, list):
                 return data
-            except json.JSONDecodeError as e:
-                raise ValueError(f"Error decoding JSON from the file: {e}")
+            else:
+                return []

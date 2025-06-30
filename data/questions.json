@@ -4,7 +4,7 @@
       "frage": "Welche der folgenden Sprachen ist eine typischerweise verwendete Skriptsprache?",
       "antworten": ["C++", "Python", "Java", "C#"],
       "richtig": 1,
-      "kategorie": "Skriptsprachen",
+      "kategorie": "skriptsprachen",
       "schwierigkeit": "einfach"
     },
     {
@@ -16,14 +16,14 @@
         "Ein Befehl zur Beendigung eines Programms"
       ],
       "richtig": 2,
-      "kategorie": "Grundlagen",
+      "kategorie": "grundlagen",
       "schwierigkeit": "einfach"
     },
     {
       "frage": "Welche Programmiersprache wird oft für Webentwicklung verwendet?",
       "antworten": ["Python", "JavaScript", "C", "Ruby"],
       "richtig": 1,
-      "kategorie": "Webentwicklung",
+      "kategorie": "webentwicklung",
       "schwierigkeit": "einfach"
     },
     {
@@ -35,7 +35,7 @@
         "Hyperloop Machine Language"
       ],
       "richtig": 0,
-      "kategorie": "Webentwicklung",
+      "kategorie": "webentwicklung",
       "schwierigkeit": "einfach"
     },
     {
@@ -47,7 +47,7 @@
         "Eine Variable erstellen"
       ],
       "richtig": 1,
-      "kategorie": "Grundlagen",
+      "kategorie": "grundlagen",
       "schwierigkeit": "einfach"
     },
     {
@@ -59,28 +59,28 @@
         "define myFunc()"
       ],
       "richtig": 1,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "einfach"
     },
     {
       "frage": "Welches Symbol wird in Python für Kommentare verwendet?",
       "antworten": ["//", "#", "/* */", "--"],
       "richtig": 1,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "einfach"
     },
     {
       "frage": "Wie heißt der Datentyp für Wahrheitswerte in Python?",
       "antworten": ["int", "str", "bool", "float"],
       "richtig": 2,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "einfach"
     },
     {
       "frage": "Welche Methode fügt ein Element am Ende einer Liste in Python hinzu?",
       "antworten": ["add()", "append()", "insert()", "push()"],
       "richtig": 1,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "einfach"
     },
     {
@@ -92,11 +92,11 @@
         "Mit Anführungszeichen \"\""
       ],
       "richtig": 1,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "einfach"
     },
 
-    { 
+    {
       "frage": "Was bedeutet 'Debugging'?",
       "antworten": [
         "Das Schreiben von neuem Code",
@@ -105,14 +105,14 @@
         "Das Testen von Hardware"
       ],
       "richtig": 1,
-      "kategorie": "Grundlagen",
+      "kategorie": "grundlagen",
       "schwierigkeit": "mittel"
     },
     {
       "frage": "Welcher Datentyp speichert eine Folge von Zeichen?",
       "antworten": ["int", "bool", "string", "float"],
       "richtig": 2,
-      "kategorie": "Grundlagen",
+      "kategorie": "grundlagen",
       "schwierigkeit": "mittel"
     },
     {
@@ -124,14 +124,14 @@
         "Ein spezieller Datentyp"
       ],
       "richtig": 0,
-      "kategorie": "Grundlagen",
+      "kategorie": "grundlagen",
       "schwierigkeit": "mittel"
     },
     {
       "frage": "Welcher Operator vergleicht zwei Werte auf Gleichheit in Python?",
       "antworten": ["=", "==", "!=", "<>"],
       "richtig": 1,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "mittel"
     },
     {
@@ -143,14 +143,14 @@
         "Wandelt einen String in Großbuchstaben um"
       ],
       "richtig": 0,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "mittel"
     },
     {
       "frage": "Wie nennt man eine Funktion, die sich selbst aufruft?",
       "antworten": ["Iteration", "Rekursion", "Rekord", "Iteration"],
       "richtig": 1,
-      "kategorie": "Grundlagen",
+      "kategorie": "grundlagen",
       "schwierigkeit": "mittel"
     },
     {
@@ -162,21 +162,21 @@
         "Eine Schleife"
       ],
       "richtig": 0,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "mittel"
     },
     {
       "frage": "Welcher Befehl beendet eine Schleife vorzeitig?",
       "antworten": ["continue", "pass", "break", "return"],
       "richtig": 2,
-      "kategorie": "Grundlagen",
+      "kategorie": "grundlagen",
       "schwierigkeit": "mittel"
     },
     {
       "frage": "Wie definiert man eine anonyme Funktion in Python?",
       "antworten": ["def", "lambda", "func", "anon"],
       "richtig": 1,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "mittel"
     },
     {
@@ -188,7 +188,7 @@
         "Ein Python-Paketmanager"
       ],
       "richtig": 1,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "mittel"
     },
 
@@ -201,7 +201,7 @@
         "Beide sind ungleich"
       ],
       "richtig": 0,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "schwer"
     },
     {
@@ -213,7 +213,7 @@
         "Fügt Strings zusammen"
       ],
       "richtig": 0,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "schwer"
     },
     {
@@ -225,7 +225,7 @@
         "Keines von beiden"
       ],
       "richtig": 2,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "schwer"
     },
     {
@@ -237,7 +237,7 @@
         "Ein Datentyp"
       ],
       "richtig": 0,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "schwer"
     },
     {
@@ -249,7 +249,7 @@
         "Sortiert eine Liste"
       ],
       "richtig": 0,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "schwer"
     },
     {
@@ -261,7 +261,7 @@
         "Generator"
       ],
       "richtig": 0,
-      "kategorie": "Programmierung",
+      "kategorie": "programmierung",
       "schwierigkeit": "schwer"
     },
     {
@@ -273,7 +273,7 @@
         "Definiert eine Variable"
       ],
       "richtig": 0,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "schwer"
     },
     {
@@ -285,7 +285,7 @@
         "Daten speichern"
       ],
       "richtig": 0,
-      "kategorie": "Python",
+      "kategorie": "python",
       "schwierigkeit": "schwer"
     }
   ]

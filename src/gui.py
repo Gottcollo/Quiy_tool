@@ -55,3 +55,39 @@ class QuizGUI(tk.Toplevel):
     def show_result(self):
         messagebox.showinfo("Ergebnis", f"Du hast {self.punkte} von {len(self.quiz.fragen)} Fragen richtig beantwortet!")
         self.destroy()
+
+
+
+class AuswahlFenster(tk.Toplevel):
+    def __init__(self, master, fragen, on_start_quiz):
+        super().__init__(master)
+        self.title("Auswahl Quiz-Kategorie & Schwierigkeit")
+        self.fragen = fragen
+        self.on_start_quiz = on_start_quiz
+        self.geometry("400x300")
+
+        kategorien = sorted(set(f['kategorie'] for f in fragen))
+        schwierigkeiten = sorted(set(f['schwierigkeit'] for f in fragen))
+
+        tk.Label(self, text="Kategorie:").pack()
+        self.kategorie_var = tk.StringVar(value=kategorien[0])
+        for k in kategorien:
+            tk.Radiobutton(self, text=k, variable=self.kategorie_var, value=k).pack(anchor="w")
+
+        tk.Label(self, text="Schwierigkeitsgrad:").pack()
+        self.schwierigkeit_var = tk.StringVar(value=schwierigkeiten[0])
+        for s in schwierigkeiten:
+            tk.Radiobutton(self, text=s, variable=self.schwierigkeit_var, value=s).pack(anchor="w")
+
+        start_btn = tk.Button(self, text="Quiz starten", command=self.start_quiz)
+        start_btn.pack(pady=10)
+
+    def start_quiz(self):
+        kategorie = self.kategorie_var.get()
+        schwierigkeitsgrad = self.schwierigkeit_var.get()
+        gefilterte = [f for f in self.fragen if f['kategorie'] == kategorie and f['schwierigkeit'] == schwierigkeitsgrad]
+        if not gefilterte:
+            messagebox.showwarning("Keine Fragen", "Für die Auswahl wurden keine Fragen gefunden.")
+            return
+        self.destroy()
+        self.on_start_quiz(gefilterte)

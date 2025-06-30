@@ -31,9 +31,12 @@ class LoginWindow:
         password = self.entry_password.get()
 
         if self.user_db.get(username) == password:
-            messagebox.showinfo('Erfolgreicher Login', 'Willkommen, {username}!')
-            self.master.destroy()
+            messagebox.showinfo('Erfolgreicher Login', f'Willkommen, {username}!')
+            # NICHT self.master.destroy() hier aufrufen!
+            # Stattdessen nur Login-Fenster verstecken oder schließen, aber root nicht zerstören!
+            self.master.withdraw()  # oder self.master.quit() vermeiden!
             self.on_login_success(username)
+
 
         else:
             messagebox.showerror("Fehler", "Falscher User oder Password.")

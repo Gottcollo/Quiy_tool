@@ -1,15 +1,11 @@
-from data_handler import QuestionLoader
+from quiz_app import QuizApp
+
+
+
 
 def main():
-    loader = QuestionLoader('data/questions.json')
-    fragen = loader.load_questions()
-
-    for frage in fragen:
-        print(f'Frage: {frage['frage']}')
-        for i, antwort in enumerate(frage['antworten']):
-            print(f' {i+1}. {antwort}')
-        print(f'Richtige Antwort: {frage['antworten'][frage['richtig']]}')
-        print()
+    app = QuizApp('data/questions.json')
+    app.run()
 
 if __name__ == "__main__":
     main()

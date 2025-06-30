@@ -1,21 +1,292 @@
-[
-  {
-    "frage": "Welche der folgenden Sprachen ist eine typischerweise verwendete Skriptsprache?",
-    "antworten": ["C++", "Python", "Java", "C#"],
-    "richtig": 1,
-    "kategorie": "Programmierung",
-    "schwierigkeit": "Einfach"
-  },
-  {
-    "frage": "Was ist eine Variable in der Programmierung?",
-    "antworten": [
-      "Ein fester Wert, der sich nicht ändert",
-      "Eine Schleife zur Wiederholung von Code",
-      "Ein Speicherplatz für einen veränderbaren Wert",
-      "Ein Befehl zur Beendigung eines Programms"
-    ],
-    "richtig": 2,
-    "kategorie": "Grundlagen",
-    "schwierigkeit": "Einfach"
-  }
-]
+{
+  "questions": [
+    {
+      "frage": "Welche der folgenden Sprachen ist eine typischerweise verwendete Skriptsprache?",
+      "antworten": ["C++", "Python", "Java", "C#"],
+      "richtig": 1,
+      "kategorie": "Skriptsprachen",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Was ist eine Variable in der Programmierung?",
+      "antworten": [
+        "Ein fester Wert, der sich nicht ändert",
+        "Eine Schleife zur Wiederholung von Code",
+        "Ein Speicherplatz für einen veränderbaren Wert",
+        "Ein Befehl zur Beendigung eines Programms"
+      ],
+      "richtig": 2,
+      "kategorie": "Grundlagen",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Welche Programmiersprache wird oft für Webentwicklung verwendet?",
+      "antworten": ["Python", "JavaScript", "C", "Ruby"],
+      "richtig": 1,
+      "kategorie": "Webentwicklung",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Wofür steht die Abkürzung 'HTML'?",
+      "antworten": [
+        "HyperText Markup Language",
+        "HighText Machine Language",
+        "Hyper Transfer Markup Language",
+        "Hyperloop Machine Language"
+      ],
+      "richtig": 0,
+      "kategorie": "Webentwicklung",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Was macht eine Schleife in der Programmierung?",
+      "antworten": [
+        "Eine Bedingung überprüfen",
+        "Code mehrmals ausführen",
+        "Eine Funktion definieren",
+        "Eine Variable erstellen"
+      ],
+      "richtig": 1,
+      "kategorie": "Grundlagen",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Wie definiert man eine Funktion in Python?",
+      "antworten": [
+        "function myFunc():",
+        "def myFunc():",
+        "func myFunc()",
+        "define myFunc()"
+      ],
+      "richtig": 1,
+      "kategorie": "Python",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Welches Symbol wird in Python für Kommentare verwendet?",
+      "antworten": ["//", "#", "/* */", "--"],
+      "richtig": 1,
+      "kategorie": "Python",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Wie heißt der Datentyp für Wahrheitswerte in Python?",
+      "antworten": ["int", "str", "bool", "float"],
+      "richtig": 2,
+      "kategorie": "Python",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Welche Methode fügt ein Element am Ende einer Liste in Python hinzu?",
+      "antworten": ["add()", "append()", "insert()", "push()"],
+      "richtig": 1,
+      "kategorie": "Python",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Wie beginnt man einen Block in Python?",
+      "antworten": [
+        "Mit geschweiften Klammern {}",
+        "Mit einem Doppelpunkt :",
+        "Mit Klammern ()",
+        "Mit Anführungszeichen \"\""
+      ],
+      "richtig": 1,
+      "kategorie": "Python",
+      "schwierigkeit": "einfach"
+    },
+
+    { 
+      "frage": "Was bedeutet 'Debugging'?",
+      "antworten": [
+        "Das Schreiben von neuem Code",
+        "Das Entfernen von Fehlern im Code",
+        "Das Kompilieren eines Programms",
+        "Das Testen von Hardware"
+      ],
+      "richtig": 1,
+      "kategorie": "Grundlagen",
+      "schwierigkeit": "mittel"
+    },
+    {
+      "frage": "Welcher Datentyp speichert eine Folge von Zeichen?",
+      "antworten": ["int", "bool", "string", "float"],
+      "richtig": 2,
+      "kategorie": "Grundlagen",
+      "schwierigkeit": "mittel"
+    },
+    {
+      "frage": "Welche der folgenden Aussagen beschreibt eine Schleife korrekt?",
+      "antworten": [
+        "Eine Struktur zur Wiederholung von Anweisungen",
+        "Eine Methode zur Variablendeklaration",
+        "Ein Fehler im Code",
+        "Ein spezieller Datentyp"
+      ],
+      "richtig": 0,
+      "kategorie": "Grundlagen",
+      "schwierigkeit": "mittel"
+    },
+    {
+      "frage": "Welcher Operator vergleicht zwei Werte auf Gleichheit in Python?",
+      "antworten": ["=", "==", "!=", "<>"],
+      "richtig": 1,
+      "kategorie": "Python",
+      "schwierigkeit": "mittel"
+    },
+    {
+      "frage": "Was macht die Methode 'split()' in Python?",
+      "antworten": [
+        "Teilt eine Zeichenkette in eine Liste",
+        "Fügt zwei Listen zusammen",
+        "Entfernt Leerzeichen aus einem String",
+        "Wandelt einen String in Großbuchstaben um"
+      ],
+      "richtig": 0,
+      "kategorie": "Python",
+      "schwierigkeit": "mittel"
+    },
+    {
+      "frage": "Wie nennt man eine Funktion, die sich selbst aufruft?",
+      "antworten": ["Iteration", "Rekursion", "Rekord", "Iteration"],
+      "richtig": 1,
+      "kategorie": "Grundlagen",
+      "schwierigkeit": "mittel"
+    },
+    {
+      "frage": "Was ist ein Tuple in Python?",
+      "antworten": [
+        "Eine unveränderliche Liste",
+        "Eine Variable",
+        "Ein Fehler",
+        "Eine Schleife"
+      ],
+      "richtig": 0,
+      "kategorie": "Python",
+      "schwierigkeit": "mittel"
+    },
+    {
+      "frage": "Welcher Befehl beendet eine Schleife vorzeitig?",
+      "antworten": ["continue", "pass", "break", "return"],
+      "richtig": 2,
+      "kategorie": "Grundlagen",
+      "schwierigkeit": "mittel"
+    },
+    {
+      "frage": "Wie definiert man eine anonyme Funktion in Python?",
+      "antworten": ["def", "lambda", "func", "anon"],
+      "richtig": 1,
+      "kategorie": "Python",
+      "schwierigkeit": "mittel"
+    },
+    {
+      "frage": "Was ist PEP 8?",
+      "antworten": [
+        "Eine Programmiersprache",
+        "Ein Style-Guide für Python",
+        "Ein Debugging-Tool",
+        "Ein Python-Paketmanager"
+      ],
+      "richtig": 1,
+      "kategorie": "Python",
+      "schwierigkeit": "mittel"
+    },
+
+    {
+      "frage": "Was ist der Unterschied zwischen '==' und 'is' in Python?",
+      "antworten": [
+        "'==' vergleicht Werte, 'is' Identität",
+        "'==' vergleicht Identität, 'is' Werte",
+        "Beide sind gleich",
+        "Beide sind ungleich"
+      ],
+      "richtig": 0,
+      "kategorie": "Python",
+      "schwierigkeit": "schwer"
+    },
+    {
+      "frage": "Was bewirkt die Methode 'strip()'?",
+      "antworten": [
+        "Entfernt Leerzeichen am Anfang und Ende eines Strings",
+        "Teilt einen String in eine Liste",
+        "Wandelt String in Kleinbuchstaben um",
+        "Fügt Strings zusammen"
+      ],
+      "richtig": 0,
+      "kategorie": "Python",
+      "schwierigkeit": "schwer"
+    },
+    {
+      "frage": "Wie kann man eine Liste in Python sortieren?",
+      "antworten": [
+        "list.sort()",
+        "sorted(list)",
+        "Beide sind korrekt",
+        "Keines von beiden"
+      ],
+      "richtig": 2,
+      "kategorie": "Python",
+      "schwierigkeit": "schwer"
+    },
+    {
+      "frage": "Was ist ein Generator in Python?",
+      "antworten": [
+        "Ein spezieller Iterator",
+        "Ein Fehler",
+        "Eine Variable",
+        "Ein Datentyp"
+      ],
+      "richtig": 0,
+      "kategorie": "Python",
+      "schwierigkeit": "schwer"
+    },
+    {
+      "frage": "Was macht die Methode 'map()'?",
+      "antworten": [
+        "Wendet eine Funktion auf alle Elemente einer Liste an",
+        "Erstellt eine neue Liste",
+        "Filtert eine Liste",
+        "Sortiert eine Liste"
+      ],
+      "richtig": 0,
+      "kategorie": "Python",
+      "schwierigkeit": "schwer"
+    },
+    {
+      "frage": "Wie nennt man eine Funktion, die eine andere Funktion als Parameter erhält?",
+      "antworten": [
+        "Higher-Order-Funktion",
+        "Rekursive Funktion",
+        "Anonyme Funktion",
+        "Generator"
+      ],
+      "richtig": 0,
+      "kategorie": "Programmierung",
+      "schwierigkeit": "schwer"
+    },
+    {
+      "frage": "Was macht das Schlüsselwort 'yield' in Python?",
+      "antworten": [
+        "Gibt Werte in Generatoren zurück",
+        "Beendet eine Funktion",
+        "Startet eine Schleife",
+        "Definiert eine Variable"
+      ],
+      "richtig": 0,
+      "kategorie": "Python",
+      "schwierigkeit": "schwer"
+    },
+    {
+      "frage": "Was ist der Zweck von 'decorators' in Python?",
+      "antworten": [
+        "Funktionen erweitern oder modifizieren",
+        "Variablen löschen",
+        "Programme debuggen",
+        "Daten speichern"
+      ],
+      "richtig": 0,
+      "kategorie": "Python",
+      "schwierigkeit": "schwer"
+    }
+  ]
+}

@@ -141,3 +141,60 @@ class QuizGUI(tk.Toplevel):
 
         close_btn = tk.Button(self, text="Schließen", command=self.destroy)
         close_btn.grid(row=1, column=0, pady=10)
+
+
+
+
+
+class AuswahlFenster(tk.Toplevel):
+    def __init__(self, master, fragen, on_start_quiz):
+        super().__init__(master)
+        self.title("Auswahl Quiz-Kategorie & Schwierigkeit")
+        self.fragen = fragen
+        self.on_start_quiz = on_start_quiz
+        self.geometry("600x500")
+        
+        self.columnconfigure(0, weight=1)
+
+        # Kategorien und Schwierigkeitsgrade sammeln
+        kategorien = sorted(set(f['kategorie'] for f in fragen))
+        schwierigkeiten = sorted(set(f['schwierigkeit'] for f in fragen))
+
+        # Label Kategorie
+        lbl_kategorie = tk.Label(self, text="Kategorie:")
+        lbl_kategorie.grid(row=0, column=0, sticky="w", padx=20, pady=(20, 5))
+
+        self.kategorie_var = tk.StringVar(value=kategorien[0] if kategorien else "")
+
+        # Radiobuttons Kategorien
+        for i, k in enumerate(kategorien):
+            rb = tk.Radiobutton(self, text=k, variable=self.kategorie_var, value=k)
+            rb.grid(row=i+1, column=0, sticky="w", padx=40)
+
+        # Label Schwierigkeit
+        start_row = len(kategorien) + 1
+        lbl_schwierigkeit = tk.Label(self, text="Schwierigkeitsgrad:")
+        lbl_schwierigkeit.grid(row=start_row, column=0, sticky="w", padx=20, pady=(20, 5))
+
+        self.schwierigkeit_var = tk.StringVar(value=schwierigkeiten[0] if schwierigkeiten else "")
+
+        # Radiobuttons Schwierigkeit
+        for j, s in enumerate(schwierigkeiten):
+            rb = tk.Radiobutton(self, text=s, variable=self.schwierigkeit_var, value=s)
+            rb.grid(row=start_row + j + 1, column=0, sticky="w", padx=40)
+
+        # Button Quiz starten
+        btn_start = tk.Button(self, text="Quiz starten", command=self.start_quiz)
+        btn_start.grid(row=start_row + len(schwierigkeiten) + 2, column=0, pady=30)
+
+    def start_quiz(self):
+        kategorie = self.kategorie_var.get()
+        schwierigkeitsgrad = self.schwierigkeit_var.get()
+        gefilterte = [f for f in self.fragen if f['kategorie'] == kategorie and f['schwierigkeit'] == schwierigkeitsgrad]
+        if not gefilterte:
+            messagebox.showwarning("Keine Fragen", "Für die Auswahl wurden keine Fragen gefunden.")
+            return
+        self.destroy()
+        self.on_start_quiz(gefilterte)
+
+

@@ -112,7 +112,7 @@ class AuswahlFenster(tk.Toplevel):
         self.title("Auswahl Quiz-Kategorie & Schwierigkeit")
         self.fragen = fragen
         self.on_start_quiz = on_start_quiz
-        self.geometry("400x300")
+        self.geometry("600x500")
 
         # Dynamisch Kategorien und Schwierigkeitsgrade sammeln und sortieren
         kategorien = sorted(set(f['kategorie'] for f in fragen))

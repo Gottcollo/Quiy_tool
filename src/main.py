@@ -10,6 +10,8 @@ def start_quiz(username, root):
     fragen = QuestionLoader('data/questions.json').load_questions()
 
     def on_quiz_start(gefilterte_fragen):
+        quiz = Quizmanager(gefilterte_fragen)
+        quiz_gui = QuizGUI(root, quiz, username)
         # Begrenze auf 5–10 zufällige Fragen (falls genug vorhanden)
         if len(gefilterte_fragen) >= 5:
             anzahl = min(len(gefilterte_fragen), random.randint(5, 10))
@@ -18,7 +20,7 @@ def start_quiz(username, root):
             ausgewählte_fragen = gefilterte_fragen  # Weniger als 5 → nimm alle
 
         quiz = Quizmanager(ausgewählte_fragen)
-        quiz_gui = QuizGUI(root, quiz)
+        quiz_gui = QuizGUI(root, quiz, username)
         quiz_gui.grab_set()
 
     auswahl_fenster = AuswahlFenster(root, fragen, on_quiz_start)

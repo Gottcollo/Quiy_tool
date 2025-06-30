@@ -1,11 +1,36 @@
 import tkinter as tk
 from tkinter import messagebox
+import json
+import os
+from datetime import datetime
+
+def save_result(username, score, total):
+    result = {
+        "user": username,
+        "score": score,
+        "total": total,
+        "date": datetime.now().isoformat()
+    }
+
+    pfad = "data/results.json"
+    if os.path.exists(pfad):
+        with open(pfad, "r", encoding="utf-8") as f:
+            daten = json.load(f)
+    else:
+        daten = []
+
+    daten.append(result)
+
+    with open(pfad, "w", encoding="utf-8") as f:
+        json.dump(daten, f, indent=2, ensure_ascii=False)
+
 
 class QuizGUI(tk.Toplevel):
-    def __init__(self, master, quizmanager):
+    def __init__(self, master, quizmanager, username):
         super().__init__(master)
         self.title("Quiz")
         self.quiz = quizmanager
+        self.username = username
         self.current_index = 0
         self.punkte = 0
 
@@ -53,8 +78,30 @@ class QuizGUI(tk.Toplevel):
         self.show_question()
 
     def show_result(self):
-        messagebox.showinfo("Ergebnis", f"Du hast {self.punkte} von {len(self.quiz.fragen)} Fragen richtig beantwortet!")
-        self.destroy()
+        gesamt = len(self.quiz.fragen)
+        prozent = (self.punkte / gesamt) * 100
+
+        if prozent >= 90:
+            feedback = "Ausgezeichnet! Du hast ein sehr gutes Verständnis der Themen."
+        elif prozent >= 70:
+            feedback = "Gut gemacht! Du beherrschst die Grundlagen, aber es gibt noch Luft nach oben."
+        elif prozent >= 50:
+            feedback = "Du hast einige Fragen richtig beantwortet. Etwas mehr Übung hilft dir weiter."
+        else:
+            feedback = "Du solltest die Themen nochmals wiederholen. Lass dich nicht entmutigen!"
+        save_result(self.username, self.punkte, len(self.quiz.fragen))
+
+    # Leere das Fenster und zeige das Ergebnis
+        for widget in self.winfo_children():
+            widget.destroy()
+
+        result_text = f"Du hast {self.punkte} von {gesamt} Fragen richtig beantwortet ({prozent:.0f}%).\n\n{feedback}"
+        result_label = tk.Label(self, text=result_text, font=("Arial", 14), wraplength=500, justify="left")
+        result_label.pack(padx=20, pady=40)
+
+        close_btn = tk.Button(self, text="Schließen", command=self.destroy)
+        close_btn.pack(pady=10)
+
 
 
 

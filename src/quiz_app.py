@@ -8,16 +8,24 @@ class QuizApp:
         self.quiz = Quizmanager(self.fragen)
 
     def auswahl_mit_optionen(self, titel, werte_liste):
-
         if not werte_liste:
             print(f"Keine Optionen verfügbar für {titel}")
             return None
 
         print(f'\n{titel}')
-        for eintrag in werte_liste:
-            print(f' - {eintrag}')
-        eingabe = input('Deine Auswahl: ')
-        return eingabe if eingabe else None
+        for i, eintrag in enumerate(werte_liste, 1):
+            print(f'{i}. {eintrag}')
+    
+        while True:
+            eingabe = input('Deine Auswahl (Nummer): ')
+            if not eingabe:
+                return None
+            if eingabe.isdigit():
+                index = int(eingabe) - 1
+                if 0 <= index < len(werte_liste):
+                    return werte_liste[index]
+            print("Ungültige Eingabe, bitte eine Zahl aus der Liste eingeben.")
+
     
     def run(self):
         kategorien = sorted(set(f.get("kategorie", "") for f in self.fragen if "kategorie" in f))
@@ -32,19 +40,10 @@ class QuizApp:
         gefilterte_fragen = self.quiz.filter_fragen(
             kategorie=kategorie,
             schwierigkeitsgrad=schwierigkeitsgrad
-    )
+        )
 
         if not gefilterte_fragen:
             print(' Keine Fragen gefunden für die Auswahl.')
             return
 
-        self.quiz.run(gefilterte_fragen)
-
-    # Rest deiner Methode ...
-
-
-        if not gefilterte_fragen:
-            print(' Keine Fragen gefunden für die Auswahl.')
-            return
-        
         self.quiz.run(gefilterte_fragen)

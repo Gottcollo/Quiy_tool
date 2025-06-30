@@ -50,6 +50,7 @@
       "kategorie": "grundlagen",
       "schwierigkeit": "einfach"
     },
+
     {
       "frage": "Wie definiert man eine Funktion in Python?",
       "antworten": [
@@ -146,6 +147,7 @@
       "kategorie": "python",
       "schwierigkeit": "mittel"
     },
+
     {
       "frage": "Wie nennt man eine Funktion, die sich selbst aufruft?",
       "antworten": ["Iteration", "Rekursion", "Rekord", "Iteration"],

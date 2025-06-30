@@ -50,7 +50,6 @@
       "kategorie": "grundlagen",
       "schwierigkeit": "einfach"
     },
-
     {
       "frage": "Wie definiert man eine Funktion in Python?",
       "antworten": [
@@ -96,7 +95,6 @@
       "kategorie": "python",
       "schwierigkeit": "einfach"
     },
-
     {
       "frage": "Was bedeutet 'Debugging'?",
       "antworten": [
@@ -147,7 +145,6 @@
       "kategorie": "python",
       "schwierigkeit": "mittel"
     },
-
     {
       "frage": "Wie nennt man eine Funktion, die sich selbst aufruft?",
       "antworten": ["Iteration", "Rekursion", "Rekord", "Iteration"],
@@ -193,7 +190,6 @@
       "kategorie": "python",
       "schwierigkeit": "mittel"
     },
-
     {
       "frage": "Was ist der Unterschied zwischen '==' und 'is' in Python?",
       "antworten": [
@@ -289,6 +285,54 @@
       "richtig": 0,
       "kategorie": "python",
       "schwierigkeit": "schwer"
+    },
+    {
+      "frage": "Was macht der Befehl 'Get-Process' in PowerShell?",
+      "antworten": [
+        "Listet laufende Prozesse auf",
+        "Startet einen neuen Prozess",
+        "Beendet alle Prozesse",
+        "Zeigt die IP-Adresse an"
+      ],
+      "richtig": 0,
+      "kategorie": "PowerShell",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Was versteht man unter Virtualisierung?",
+      "antworten": [
+        "Mehrere Betriebssysteme auf einer Hardware ausführen",
+        "Eine Software neu installieren",
+        "Einen Computer formatieren",
+        "Ein Netzwerk konfigurieren"
+      ],
+      "richtig": 0,
+      "kategorie": "Virtualisierung",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Was ist eine VM (Virtuelle Maschine)?",
+      "antworten": [
+        "Eine virtuelle Rechenumgebung auf einem Hostsystem",
+        "Ein physischer Computer",
+        "Ein Cloud-Speicher",
+        "Ein Netzwerkgerät"
+      ],
+      "richtig": 0,
+      "kategorie": "VM-Konzepte",
+      "schwierigkeit": "einfach"
+    },
+    {
+      "frage": "Welches Tool dient zur Automatisierung von Aufgaben in Windows?",
+      "antworten": [
+        "PowerShell",
+        "Microsoft Word",
+        "Photoshop",
+        "Excel"
+      ],
+      "richtig": 0,
+      "kategorie": "Automatisierung",
+      "schwierigkeit": "einfach"
     }
   ]
 }

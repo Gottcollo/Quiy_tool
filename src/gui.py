@@ -82,12 +82,18 @@ class AuswahlFenster(tk.Toplevel):
         start_btn = tk.Button(self, text="Quiz starten", command=self.start_quiz)
         start_btn.pack(pady=10)
 
+        # Feedback Label für Warnungen/Rückmeldungen
+        self.feedback_label = tk.Label(self, text="", fg="red", font=("Arial", 10))
+        self.feedback_label.pack()
+
     def start_quiz(self):
         kategorie = self.kategorie_var.get()
         schwierigkeitsgrad = self.schwierigkeit_var.get()
         gefilterte = [f for f in self.fragen if f['kategorie'] == kategorie and f['schwierigkeit'] == schwierigkeitsgrad]
         if not gefilterte:
-            messagebox.showwarning("Keine Fragen", "Für die Auswahl wurden keine Fragen gefunden.")
+            # Statt Popup nur Text im Fenster anzeigen:
+            self.feedback_label.config(text="Für die Auswahl wurden keine Fragen gefunden.")
             return
+        self.feedback_label.config(text="")  # Rückmeldung zurücksetzen
         self.destroy()
         self.on_start_quiz(gefilterte)

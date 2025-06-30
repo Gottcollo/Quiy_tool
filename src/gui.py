@@ -58,6 +58,7 @@ class QuizGUI(tk.Toplevel):
 
 
 
+
 class AuswahlFenster(tk.Toplevel):
     def __init__(self, master, fragen, on_start_quiz):
         super().__init__(master)
@@ -66,34 +67,30 @@ class AuswahlFenster(tk.Toplevel):
         self.on_start_quiz = on_start_quiz
         self.geometry("400x300")
 
+        # Dynamisch Kategorien und Schwierigkeitsgrade sammeln und sortieren
         kategorien = sorted(set(f['kategorie'] for f in fragen))
         schwierigkeiten = sorted(set(f['schwierigkeit'] for f in fragen))
 
         tk.Label(self, text="Kategorie:").pack()
-        self.kategorie_var = tk.StringVar(value=kategorien[0])
+        self.kategorie_var = tk.StringVar(value=kategorien[0] if kategorien else "")
         for k in kategorien:
             tk.Radiobutton(self, text=k, variable=self.kategorie_var, value=k).pack(anchor="w")
 
         tk.Label(self, text="Schwierigkeitsgrad:").pack()
-        self.schwierigkeit_var = tk.StringVar(value=schwierigkeiten[0])
+        self.schwierigkeit_var = tk.StringVar(value=schwierigkeiten[0] if schwierigkeiten else "")
         for s in schwierigkeiten:
             tk.Radiobutton(self, text=s, variable=self.schwierigkeit_var, value=s).pack(anchor="w")
 
         start_btn = tk.Button(self, text="Quiz starten", command=self.start_quiz)
         start_btn.pack(pady=10)
 
-        # Feedback Label für Warnungen/Rückmeldungen
-        self.feedback_label = tk.Label(self, text="", fg="red", font=("Arial", 10))
-        self.feedback_label.pack()
-
     def start_quiz(self):
         kategorie = self.kategorie_var.get()
         schwierigkeitsgrad = self.schwierigkeit_var.get()
         gefilterte = [f for f in self.fragen if f['kategorie'] == kategorie and f['schwierigkeit'] == schwierigkeitsgrad]
         if not gefilterte:
-            # Statt Popup nur Text im Fenster anzeigen:
-            self.feedback_label.config(text="Für die Auswahl wurden keine Fragen gefunden.")
+            messagebox.showwarning("Keine Fragen", "Für die Auswahl wurden keine Fragen gefunden.")
             return
-        self.feedback_label.config(text="")  # Rückmeldung zurücksetzen
         self.destroy()
         self.on_start_quiz(gefilterte)
+

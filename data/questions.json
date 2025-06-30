@@ -1,0 +1,21 @@
+[
+  {
+    "frage": "Welche der folgenden Sprachen ist eine typischerweise verwendete Skriptsprache?",
+    "antworten": ["C++", "Python", "Java", "C#"],
+    "richtig": 1,
+    "kategorie": "Programmierung",
+    "schwierigkeit": "Einfach"
+  },
+  {
+    "frage": "Was ist eine Variable in der Programmierung?",
+    "antworten": [
+      "Ein fester Wert, der sich nicht ändert",
+      "Eine Schleife zur Wiederholung von Code",
+      "Ein Speicherplatz für einen veränderbaren Wert",
+      "Ein Befehl zur Beendigung eines Programms"
+    ],
+    "richtig": 2,
+    "kategorie": "Grundlagen",
+    "schwierigkeit": "Einfach"
+  }
+]

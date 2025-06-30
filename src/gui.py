@@ -115,7 +115,7 @@ class QuizGUI(tk.Toplevel):
             self.feedback_label.config(text=f"Falsch! Die richtige Antwort ist:\n{richtige_antwort}", fg='red')
 
         self.current_index += 1
-        self.after(1500, self.show_question)
+        self.after(3500, self.show_question)
 
     def show_result(self):
         gesamt = len(self.quiz.fragen)

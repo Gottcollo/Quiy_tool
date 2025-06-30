@@ -3,6 +3,32 @@ from tkinter import messagebox
 import json
 import os
 from datetime import datetime
+from highscore import HighscoreManager
+
+def zeige_highscores_fenster(master):
+    manager = HighscoreManager()
+    top = manager.top_scores(10)
+
+    if not top:
+        messagebox.showinfo("Highscores", "Noch keine Einträge vorhanden.")
+        return
+
+    fenster = tk.Toplevel(master)
+    fenster.title("Highscores")
+
+    text = tk.Text(fenster, width=60, height=20)
+    text.pack(padx=10, pady=10)
+
+    text.insert("end", f"{'Name':<15}{'Punkte':<10}{'Gesamt':<10}{'Prozent':<10}{'Datum'}\n")
+    text.insert("end", "-" * 60 + "\n")
+
+    for eintrag in top:
+        prozent = (eintrag["score"] / eintrag["total"]) * 100
+        zeile = f"{eintrag['user']:<15}{eintrag['score']:<10}{eintrag['total']:<10}{prozent:>7.1f}%   {eintrag['date'][:10]}\n"
+        text.insert("end", zeile)
+
+    text.config(state="disabled")
+
 
 def save_result(username, score, total):
     result = {

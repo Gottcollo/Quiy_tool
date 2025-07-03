@@ -9,7 +9,7 @@ class LoginWindow:
         self.master.title('Login')
         self.on_login_success = on_login_success
 
-        #beispiel-user (Benutzername: Passwort)
+        #beispiel-user (Benutzername: Passwort)immer erweiterbar
         self.user_db = { 'admin': '1234', 
                         'sam': 'samu1234'
                         
